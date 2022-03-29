@@ -7,6 +7,15 @@
     <meta name="description" content="Complete list of HTTP Status Codes" />
     <meta name="author" content="J.Motyl - https://jamesmotyl.com" />
 <style>
+body {
+    margin: 0;
+}
+
+html {
+    scroll-padding-top: 2.75rem;
+    scroll-behavior: smooth;
+}
+
 h1, h2 {
     text-align: center;
 }
@@ -31,6 +40,7 @@ tr {
 tr[type="boundary"] {
     background-color: green;
     height: .5rem;
+    padding-bottom: 2rem;
 }
 
 tr[type="boundary"] td {
@@ -75,6 +85,46 @@ span {
     font-weight: 900;
 }
 </style>
+<style>
+.nav-header {
+    z-index: 1;
+    background-color: grey;
+    box-shadow: 0 5px grey;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    display: inline-block;
+    margin: 0;
+}
+
+.nav{
+    max-height: none;
+    top: 0;
+    position: relative;
+    float: right;
+    width: fit-content;
+}
+
+.menu {
+    list-style: none;
+    margin-top: 0;
+}
+.menu a{
+    text-decoration: none;
+    display: block;
+    color: white;
+    padding: 10px 30px 10px 30px;
+}
+
+.menu a:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: yellow;
+}
+
+.menu li {
+    float: left;
+}
+</style>
 </head>
 <!--
     This table of HTTP codes is for reference, the information it 
@@ -93,6 +143,20 @@ span {
     Repository: https://github.com/jxmot/http-status-codes-reference
 -->
 <body>
+    <!-- Navigation Bar -->
+    <div id="nav-header" class="nav-header">
+        <!-- Menu -->
+        <nav id="nav-menu" class="nav">
+            <ul class="menu">
+                <li><a href="#1xx">1xx</a></li>
+                <li><a href="#2xx">2xx</a></li>
+                <li><a href="#3xx">3xx</a></li>
+                <li><a href="#4xx">4xx</a></li>
+                <li><a href="#5xx">5xx</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="1xx"></div>
     <h2>HTTP Status Codes</h2>
     <div id="http-status-codes-list">
         <table>
@@ -127,7 +191,7 @@ span {
                     <td>Early Hints</td>
                     <td>This status code is primarily intended to be used with the Link header, letting the user agent start preloading resources while the server prepares a response.</td>
                 </tr>
-                <tr type="boundary"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                <tr id="2xx" type="boundary"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
                 <tr type="heading">
                     <td>&nbsp;</td>
                     <td type="heading"><span>2xx Succesful</span></td>
@@ -173,7 +237,7 @@ span {
                     <td>Partial Content</td>
                     <td>The server is returning partial data of the size requested. Used in response to a request specifying a Range header. The server must specify the range included in the response with the Content-Range header.</td>
                 </tr>
-                <tr type="boundary"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                <tr id="3xx" type="boundary"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
                 <tr type="heading">
                     <td>&nbsp;</td>
                     <td type="heading"><span>3xx Redirection</span></td>
@@ -219,7 +283,7 @@ span {
                     <td>Permanent Redirect</td>
                     <td>This means that the resource is now permanently located at another URI, specified by the Location: HTTP Response header.</td>
                 </tr>
-                <tr type="boundary"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                <tr id="4xx" type="boundary"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
                 <tr type="heading">
                     <td>&nbsp;</td>
                     <td type="heading"><span>4xx Client Error</span></td>
@@ -265,7 +329,7 @@ span {
                     <td>Unavailable For Legal Reasons</td>
                     <td>The user agent requested a resource that cannot legally be provided, such as a web page censored by a government.</td>
                 </tr>
-                <tr type="boundary"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                <tr id="5xx" type="boundary"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
                 <tr type="heading">
                     <td>&nbsp;</td>
                     <td type="heading"><span>5xx Server Error</span></td>
