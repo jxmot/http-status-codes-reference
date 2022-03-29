@@ -6,10 +6,16 @@ So I created this simple table of HTTP codes. I use it for reference, and the in
 
 What's been imported here seemed to make sense (at the time) and provided useful information.
 
-A number of codes are not present but can be added in the future. There are a bunch that are commented out at the end of the `httpcodes.html` file
+A number of codes are not present but can be added in the future. There are a bunch that are commented out at the end of the `httpcodes.html` file that are ready to use.
 
 **Sources:**
 
 * https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 * https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml
 * https://www.tutorialspoint.com/http/http_status_codes.htm
+
+
+
+---
+<img src="http://webexperiment.info/extcounter/mdcount.php?id=http-status-codes-reference">
+
