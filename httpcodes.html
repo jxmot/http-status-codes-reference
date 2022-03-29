@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTTP Status Codes</title>
+    <meta name="description" content="Complete list of HTTP Status Codes" />
+    <meta name="author" content="author" />
+    <meta name="keywords" content="keywords" />
+<style>
+h1, h2 {
+    text-align: center;
+}
+
+table {
+    width: 70%; 
+    border-collapse: collapse; 
+    margin: auto;
+    border: solid 1px black;
+}
+
+@media (min-width: 768px) {
+    table {
+        width: 50%; 
+    }
+}
+
+tr {
+    height: 1rem;
+}
+
+tr[type="boundary"] {
+    background-color: green;
+    height: .5rem;
+}
+
+tr[type="boundary"] td {
+    height: .5rem;
+    padding: 0;
+}
+
+tr[type="heading"] {
+    height: 2rem;
+}
+
+tr[type="col-heading"] {
+    border-bottom: solid 1px black;
+}
+
+tr[type="hcode"] {
+    border-bottom: solid 1px blue;
+}
+
+tr[type="hcode"] td:nth-of-type(2) {
+    border-left: solid 1px blue;
+    border-right: solid 1px blue;
+}
+
+tr[type="hcode"]:nth-child(odd) {
+    background-color: lightgrey;
+}
+
+td {
+    width: 33.3%; 
+    height: 2.5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+td[type="heading"] {
+    text-align: center;
+    height: 2rem;
+}
+
+span {
+    font-weight: 900;
+}
+</style>
+</head>
+<!--
+    This table of HTTP codes is for reference, the information it 
+    contains has been gathered from several sources. What's been 
+    imported here seemed to make sense (at the time) and provided 
+    useful information.
+
+    A number of codes are not present but can be added in the future.
+
+    Sources:
+        https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+        https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml
+        https://www.tutorialspoint.com/http/http_status_codes.htm
+
+    Author: https://github.com/jxmot
+-->
+<body>
+    <h2>HTTP Status Codes</h2>
+    <div id="http-status-codes-list">
+        <table>
+            <tbody>
+                <tr type="heading">
+                    <td>&nbsp;</td>
+                    <td type="heading"><span>1xx Informational</span></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="col-heading">
+                    <td type="heading"><span>Status code</span></td>
+                    <td type="heading"><span>Status text</span></td>
+                    <td type="heading"><span>Description</span></td>
+                </tr>
+                <tr type="hcode">
+                    <td>100</td>
+                    <td>Continue</td>
+                    <td>Only a part of the request has been received by the server, but as long as it has not been rejected, the client should continue with the request.</td>
+                </tr>
+                <tr type="hcode">
+                    <td>101</td>
+                    <td>Switching protocols</td>
+                    <td>This code is sent in response to an Upgrade request header from the client and indicates the protocol the server is switching to.</td>
+                </tr>
+                <tr type="hcode">
+                    <td>102</td>
+                    <td>Processing</td>
+                    <td>This code indicates that the server has received and is processing the request, but no response is available yet.</td>
+                </tr>
+                <tr type="hcode">
+                    <td>103</td>
+                    <td>Early Hints</td>
+                    <td>This status code is primarily intended to be used with the Link header, letting the user agent start preloading resources while the server prepares a response.</td>
+                </tr>
+                <tr type="boundary"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                <tr type="heading">
+                    <td>&nbsp;</td>
+                    <td type="heading"><span>2xx Succesful</span></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="col-heading">
+                    <td type="heading"><span>Status code</span></td>
+                    <td type="heading"><span>Status text</span></td>
+                    <td type="heading"><span>Description</span></td>
+                </tr>
+                <tr type="hcode">
+                    <td>200</td>
+                    <td>OK</td>
+                    <td>The request succeeded.</td>
+                </tr>
+                <tr type="hcode">
+                    <td>201</td>
+                    <td>Created</td>
+                    <td>The request is complete, and a new resource is created</td>
+                </tr>
+                <tr type="hcode">
+                    <td>202</td>
+                    <td>Accepted</td>
+                    <td>The request is accepted for processing, but the processing is not complete.</td>
+                </tr>
+                <tr type="hcode">
+                    <td>203</td>
+                    <td>Non-Authoritative Information</td>
+                    <td>The information in the entity header is from a local or third-party copy, not from the original server.</td>
+                </tr>
+                <tr type="hcode">
+                    <td>204</td>
+                    <td>No Content</td>
+                    <td>A status code and a header are given in the response, but there is no entity-body in the reply.</td>
+                </tr>
+                <tr type="hcode">
+                    <td>205</td>
+                    <td>Reset Content</td>
+                    <td>Tells the user agent to reset the document which sent this request.</td>
+                </tr>
+                <tr type="hcode">
+                    <td>206</td>
+                    <td>Partial Content</td>
+                    <td>The server is returning partial data of the size requested. Used in response to a request specifying a Range header. The server must specify the range included in the response with the Content-Range header.</td>
+                </tr>
+                <tr type="boundary"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                <tr type="heading">
+                    <td>&nbsp;</td>
+                    <td type="heading"><span>3xx Redirection</span></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="col-heading">
+                    <td type="heading"><span>Status code</span></td>
+                    <td type="heading"><span>Status text</span></td>
+                    <td type="heading"><span>Description</span></td>
+                </tr>
+                <tr type="hcode">
+                    <td>300</td>
+                    <td>Multiple Choices</td>
+                    <td>A link list. The user can select a link and go to that location. Maximum five addresses  </td>
+                </tr>
+                <tr type="hcode">
+                    <td>301</td>
+                    <td>Moved Permanently</td>
+                    <td>The requested page has moved to a new url.</td>
+                </tr>
+                <tr type="hcode">
+                    <td>302</td>
+                    <td>Found</td>
+                    <td>The requested page has moved temporarily to a new url</td>
+                </tr>
+                <tr type="hcode">
+                    <td>303</td>
+                    <td>See Other</td>
+                    <td>The server sent this response to direct the client to get the requested resource at another URI with a GET request.</td>
+                </tr>
+                <tr type="hcode">
+                    <td>304</td>
+                    <td>Not Modified</td>
+                    <td>This is used for caching purposes. It tells the client that the response has not been modified, so the client can continue to use the same cached version of the response. </td>
+                </tr>
+                <tr type="hcode">
+                    <td>307</td>
+                    <td>Temporary Redirect</td>
+                    <td>The server sends this response to direct the client to get the requested resource at another URI with same method that was used in the prior request.</td>
+                </tr>
+                <tr type="hcode">
+                    <td>308</td>
+                    <td>Permanent Redirect</td>
+                    <td>This means that the resource is now permanently located at another URI, specified by the Location: HTTP Response header.</td>
+                </tr>
+                <tr type="boundary"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                <tr type="heading">
+                    <td>&nbsp;</td>
+                    <td type="heading"><span>4xx Client Error</span></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="col-heading">
+                    <td type="heading"><span>Status code</span></td>
+                    <td type="heading"><span>Status text</span></td>
+                    <td type="heading"><span>Description</span></td>
+                </tr>
+                <tr type="hcode">
+                    <td>400</td>
+                    <td>Bad Request</td>
+                    <td>The server cannot or will not process the request due to something that is perceived to be a client error</td>
+                </tr>
+                <tr type="hcode">
+                    <td>401</td>
+                    <td>Unauthorized</td>
+                    <td>The HTTP standard specifies "unauthorized", semantically this response means "unauthenticated"</td>
+                </tr>
+                <tr type="hcode">
+                    <td>403</td>
+                    <td>Forbidden</td>
+                    <td>The client does not have access rights to the content</td>
+                </tr>
+                <tr type="hcode">
+                    <td>404</td>
+                    <td>Not Found</td>
+                    <td>The server can not find the requested resource.</td>
+                </tr>
+                <tr type="hcode">
+                    <td>405</td>
+                    <td>Method Not Allowed</td>
+                    <td>The request method is known by the server but is not supported by the target resource.</td>
+                </tr>
+                <tr type="hcode">
+                    <td>429</td>
+                    <td>Too Many Requests</td>
+                    <td>The user has sent too many requests in a given amount of time ("rate limiting").</td>
+                </tr>
+                <tr type="hcode">
+                    <td>451</td>
+                    <td>Unavailable For Legal Reasons</td>
+                    <td>The user agent requested a resource that cannot legally be provided, such as a web page censored by a government.</td>
+                </tr>
+                <tr type="boundary"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                <tr type="heading">
+                    <td>&nbsp;</td>
+                    <td type="heading"><span>5xx Server Error</span></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="col-heading">
+                    <td type="heading"><span>Status code</span></td>
+                    <td type="heading"><span>Status text</span></td>
+                    <td type="heading"><span>Description</span></td>
+                </tr>
+                <tr type="hcode">
+                    <td>500</td>
+                    <td>Internal Server Error</td>
+                    <td>The server has encountered a situation it does not know how to handle.</td>
+                </tr>
+                <tr type="hcode">
+                    <td>501</td>
+                    <td>Not Implemented</td>
+                    <td>The request method is not supported by the server and cannot be handled. </td>
+                </tr>
+                <tr type="hcode">
+                    <td>502</td>
+                    <td>Bad Gateway</td>
+                    <td>This error response means that the server, while working as a gateway to get a response needed to handle the request, got an invalid response.</td>
+                </tr>
+                <tr type="hcode">
+                    <td>503</td>
+                    <td>Service Unavailable</td>
+                    <td>The server is not ready to handle the request. Common causes are a server that is down for maintenance or that is overloaded. </td>
+                </tr>
+                <tr type="hcode">
+                    <td>504</td>
+                    <td>Gateway Timeout</td>
+                    <td>This error response is given when the server is acting as a gateway and cannot get a response in time.</td>
+                </tr>
+                <tr type="hcode">
+                    <td>505</td>
+                    <td>HTTP Version Not Supported</td>
+                    <td>The HTTP version used in the request is not supported by the server.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+<!-- 
+200-299   
+                <tr type="hcode">
+                    <td>207</td>
+                    <td>Multi-Status</td>
+                    <td>WebDAV</td>
+                </tr>
+                <tr type="hcode">
+                    <td>208</td>
+                    <td>Already Reported</td>
+                    <td>WebDAV</td>
+                </tr>
+                <tr type="hcode">
+                    <td>226</td>
+                    <td>IM Used</td>
+                    <td>&nbsp;</td>
+                </tr>
+
+300-399
+                <tr type="hcode">
+                    <td>305</td>
+                    <td>Use Proxy</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>306</td>
+                    <td>Switch Proxy</td>
+                    <td>&nbsp;</td>
+                </tr>
+
+400-499   
+                <tr type="hcode">
+                    <td>402</td>
+                    <td>Payment Required</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>406</td>
+                    <td>Not Acceptable</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>407</td>
+                    <td>Proxy Authentication Required</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>408</td>
+                    <td>Request Timeout</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>409</td>
+                    <td>Conflict</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>410</td>
+                    <td>Gone</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>411</td>
+                    <td>Length Required</td>
+                    <td>Server rejected the request because the `Content-Length` header field is not defined and the server requires it.</td>
+                </tr>
+                <tr type="hcode">
+                    <td>412</td>
+                    <td>Precondition Failed</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>413</td>
+                    <td>Payload Too Large</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>414</td>
+                    <td>URI Too Long</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>415</td>
+                    <td>Unsupported Media Type</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>416</td>
+                    <td>Range Not Satisfiable</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>417</td>
+                    <td>Expectation Failed</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>418</td>
+                    <td>I'm a Teapot</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>421</td>
+                    <td>Misdirected Request</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>422</td>
+                    <td>Unprocessable Entity</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>423</td>
+                    <td>Locked</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>424</td>
+                    <td>Failed Dependency</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>425</td>
+                    <td>Too Early</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>426</td>
+                    <td>Upgrade Required</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>428</td>
+                    <td>Precondition Required</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>431</td>
+                    <td>Request Header Fields Too Large</td>
+                    <td>&nbsp;</td>
+                </tr>
+
+500-599   
+                <tr type="hcode">
+                    <td>506</td>
+                    <td>Variant Also Negotiates</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>507</td>
+                    <td>Insufficient Storage</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>508</td>
+                    <td>Loop Detected</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>510</td>
+                    <td>Not Extended</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr type="hcode">
+                    <td>511</td>
+                    <td>Network Authentication Required</td>
+                    <td>&nbsp;</td>
+                </tr>
+--> 
