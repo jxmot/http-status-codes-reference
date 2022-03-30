@@ -23,6 +23,12 @@ h1, h2 {
     text-align: center;
 }
 
+@media (min-width: 500px) {
+    .page-title {
+        display: none;
+    }
+}
+
 table {
     width: 95%; 
     border-collapse: collapse; 
@@ -32,7 +38,7 @@ table {
 
 @media (min-width: 768px) {
     table {
-        width: 50%; 
+        width: 70%; 
     }
 }
 
@@ -44,6 +50,12 @@ tr[type="boundary"] {
     background-color: green;
     height: .5rem;
     padding-bottom: 2rem;
+}
+
+@media (max-width: 400px) {
+    tr[type="boundary"]:first-of-type {
+        display: none;
+    }
 }
 
 tr[type="boundary"] td {
@@ -104,6 +116,30 @@ span {
     margin: 0;
 }
 
+.nav-header div {
+    display: none;
+    font-weight: 900;
+    font-size: 100%;
+    color: white;
+    margin: 0 0 0 2em;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@media (min-width: 500px) {
+    .nav-header div {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-header div {
+        font-size: 150%;
+    }
+}
+
 .nav{
     max-height: none;
     top: 0;
@@ -121,6 +157,7 @@ span {
     text-decoration: none;
     display: block;
     color: white;
+    font-weight: 900;
     padding: 10px 15px 10px 15px;
 }
 
@@ -132,7 +169,7 @@ span {
 
 .menu a:hover {
     background-color: rgba(0, 0, 0, 0);
-    color: yellow;
+    color: black;
 }
 
 .menu li {
@@ -160,6 +197,7 @@ span {
     <!-- Navigation Bar -->
     <div id="nav_header" class="nav-header">
         <!-- Menu -->
+        <div>HTTP Status Codes</div>
         <nav id="nav_menu" class="nav">
             <ul class="menu">
                 <li><a href="#1xx">1xx</a></li>
@@ -171,10 +209,11 @@ span {
         </nav>
     </div>
     <div id="1xx"></div>
-    <h2>HTTP Status Codes</h2>
+    <h2 class="page-title">HTTP Status Codes</h2>
     <div id="http_status_codes_list">
         <table>
             <tbody>
+                <tr type="boundary"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
                 <tr type="heading">
                     <td>&nbsp;</td>
                     <td type="heading"><span>1xx Informational</span></td>
