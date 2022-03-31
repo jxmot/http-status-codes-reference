@@ -12,6 +12,18 @@
 body {
     margin: 0;
     font-family: "Roboto", sans-serif;
+    /*
+        This is necessary for Firefox mobile. And 
+        it's because FFM does not work "right". 
+
+        This adjustment is so-so for the other mobile 
+        browsers. IMHO normal text is now just a bit 
+        too small. 
+
+        NOTE: This adjustment does not change the 
+        &lt;th&gt; column width failure in FFM.
+    */
+    font-size: 95%;
 }
 
 html {
@@ -84,8 +96,20 @@ tr[type="hcode"]:nth-child(odd) {
     background-color: lightgrey;
 }
 
-td {
+th {
+    /*
+        Set the width of the columns, EXCEPT for 
+        firefox mobile which ignores this. It 
+        seems to occur if the cell contents are 
+        too large. FF mobile will let the content 
+        spill out over the table border. And that 
+        is probably because FFM is rendering the 
+        overall font size too large. 
+    */
     width: 33.3%; 
+}
+
+td {
     height: 2.5rem;
 
     padding-top: .5rem;
