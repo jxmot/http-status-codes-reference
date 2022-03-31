@@ -6,6 +6,7 @@
     <title>HTTP Status Codes</title>
     <meta name="description" content="A list of HTTP Status Codes" />
     <meta name="author" content="J.Motyl - https://jamesmotyl.com" />
+<!-- Body and Table -->
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
@@ -102,9 +103,13 @@ th {
         firefox mobile which ignores this. It 
         seems to occur if the cell contents are 
         too large. FF mobile will let the content 
-        spill out over the table border. And that 
+        spill out over the cell border. And that 
         is probably because FFM is rendering the 
-        overall font size too large. 
+        overall font size too large.
+
+        NOTE: Using a font sizing of 95% the contents 
+        no longer spill out of the cell. But FFM 
+        still ignores the setting.
     */
     width: 33.3%; 
 }
@@ -128,6 +133,7 @@ span {
     font-weight: 900;
 }
 </style>
+<!-- Navigation -->
 <style>
 .nav-header {
     z-index: 1;
@@ -232,6 +238,7 @@ span {
             </ul>
         </nav>
     </div>
+    <!-- Top of page target -->
     <div id="1xx"></div>
     <h2 class="page-title">HTTP Status Codes</h2>
     <div id="http_status_codes_list">
