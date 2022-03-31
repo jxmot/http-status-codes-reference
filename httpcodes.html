@@ -58,19 +58,19 @@ tr {
     height: 1rem;
 }
 
-tr[type="boundary"] {
+tr[type="boundary"], tr[type="boundary_first"] {
     background-color: green;
     height: .5rem;
     padding-bottom: 2rem;
 }
 
 @media (max-width: 400px) {
-    tr[type="boundary"]:first-of-type {
+    tr[type="boundary_first"]:first-of-type {
         display: none;
     }
 }
 
-tr[type="boundary"] td {
+tr[type="boundary"] th {
     height: .5rem;
     padding: 0;
 }
@@ -119,7 +119,7 @@ td {
     padding-right: .25rem;
 }
 
-td[type="heading"] {
+th[type="heading"]] {
     text-align: center;
     height: 2rem;
 }
