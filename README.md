@@ -16,7 +16,15 @@ A number of codes are not present but can be added in the future. There are a bu
 * Responsive
 * Navigation Menu
 
-**Sources of Information:**
+## EXCEPTION
+
+Android Firefox is a **lousy** browser. It does **not** render CSS correctly, and compared to other browsers on Android (Chrome, Edge, Opera) it just doesn't work right.
+
+So if your going to use Android Firefox to view this HTML page, don't. Get a different browser. You will be much happier!
+
+## Sources of Information
+
+The following were used to gather code descriptions. Some descriptions were paraphrased and/or shortened to fit the content.
 
 * https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 * https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml
