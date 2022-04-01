@@ -32,9 +32,10 @@ Android Firefox is a **lousy** browser. It does **not** render CSS correctly, an
     <figure>
         <img src="./mdimg/Screenshot_chrome_android12.png" style="width:25%;border: 2px solid black"; alt="Screen Shot Chrome on Android 12" txt="Screen Shot Chrome on Android 12"/>
         <img src="./mdimg/Screenshot_firefox_android12.png" style="width:25%;border: 2px solid black"; alt="Screen Shot Firefox on Android 12" txt="Screen Shot Firefox on Android 12"/>
-        <figcaption><strong>Chrome is on the left, Firefox on the right.</strong></figcaption>
+        <br><figcaption><strong>Chrome is on the left, Firefox on the right.</strong></figcaption>
     </figure>
 </div>
+<br>
 
 So if your going to use Android Firefox to view this HTML page, don't. Get a different browser. You will be much happier!
 
