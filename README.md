@@ -10,6 +10,14 @@ What has been imported here seemed to make sense (at the time) and provided usef
 
 A number of codes are not present but can be added in the future. There are a bunch that are commented out at the end of the `httpcodes.html` file that are ready to use.
 
+## Demonstration
+
+The page can be viewed [here](<https://webexperiment.info/portfolio/hscref/>).
+
+<p align="center">
+  <img src="./mdimg/sshot.png" style="width:50%;border: 2px solid black"; alt="Screen Shot" txt="Screen Shot"/>
+</p>
+
 ## Features
 
 * Written HTML and CSS only
@@ -19,6 +27,14 @@ A number of codes are not present but can be added in the future. There are a bu
 ## EXCEPTION
 
 Android Firefox is a **lousy** browser. It does **not** render CSS correctly, and compared to other browsers on Android (Chrome, Edge, Opera) it just doesn't work right.
+
+<div align="center">
+    <figure>
+        <img src="./mdimg/Screenshot_chrome_android12.png" style="width:25%;border: 2px solid black"; alt="Screen Shot Chrome on Android 12" txt="Screen Shot Chrome on Android 12"/>
+        <img src="./mdimg/Screenshot_firefox_android12.png" style="width:25%;border: 2px solid black"; alt="Screen Shot Firefox on Android 12" txt="Screen Shot Firefox on Android 12"/>
+        <figcaption><strong>Chrome is on the left, Firefox on the right.</strong></figcaption>
+    </figure>
+</div>
 
 So if your going to use Android Firefox to view this HTML page, don't. Get a different browser. You will be much happier!
 
